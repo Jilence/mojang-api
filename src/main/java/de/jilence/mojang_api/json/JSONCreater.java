@@ -1,7 +1,9 @@
 package de.jilence.mojang_api.json;
 
+import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,6 +26,7 @@ public class JSONCreater {
 
     public static JSONObject getJsonObject(String stringUrl) {
         String url = stringUrl;
+
         InputStream inputStream = null;
         try {
             inputStream = new URL(url).openStream();
