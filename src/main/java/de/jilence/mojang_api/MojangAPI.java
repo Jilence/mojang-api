@@ -1,7 +1,7 @@
 package de.jilence.mojang_api;
 
 import de.jilence.mojang_api.api.status.APIStatus;
-import org.bukkit.plugin.java.JavaPlugin;
+import de.jilence.mojang_api.api.uuid.UUIDConverter;
 
 public class MojangAPI {
 
@@ -10,6 +10,10 @@ public class MojangAPI {
 
     public APIStatus getAPIStatus() {
         return new APIStatus();
+    }
+
+    public UUIDConverter getUsernameConverter(String playerName) {
+        return new UUIDConverter(playerName);
     }
 
 }
