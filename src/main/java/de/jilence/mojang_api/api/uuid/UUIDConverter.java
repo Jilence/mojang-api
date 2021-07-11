@@ -1,6 +1,6 @@
 package de.jilence.mojang_api.api.uuid;
 
-import de.jilence.mojang_api.json.JSONCreater;
+import de.jilence.mojang_api.json.JSONCreator;
 import de.jilence.mojang_api.json.JSONObject;
 
 import java.util.UUID;
@@ -25,7 +25,7 @@ public class UUIDConverter {
      * @Nullable the uuid can be null
      */
     public String getUUIDStringWithoutDashes() {
-        JSONObject jsonObject = JSONCreater.getJsonObject("https://api.mojang.com/users/profiles/minecraft/" + playerName);
+        JSONObject jsonObject = JSONCreator.getJsonObject("https://api.mojang.com/users/profiles/minecraft/" + playerName);
         if(jsonObject == null) return null;
         return jsonObject.getString("id");
     }

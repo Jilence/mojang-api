@@ -1,6 +1,6 @@
 package de.jilence.mojang_api.api.status;
 
-import de.jilence.mojang_api.json.JSONCreater;
+import de.jilence.mojang_api.json.JSONCreator;
 
 public class APIStatus {
 
@@ -21,7 +21,7 @@ public class APIStatus {
      * @return the status
      */
     public APIStatusResponse getStatus() {
-        return new APIStatusResponse(JSONCreater.getJsonArray("https://status.mojang.com/check"));
+        return new APIStatusResponse(JSONCreator.getJsonArray("https://status.mojang.com/check"));
     }
 
 }

@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class JSONCreater {
+public class JSONCreator {
 
     private static String readAll(Reader rd)  {
         StringBuilder sb = new StringBuilder();
